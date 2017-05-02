@@ -71,6 +71,7 @@ public class FragmentVocabulary extends LazyFragment implements VocabularyAdapte
             ToastUtil.showMessage(getActivity(), "未连接网络");
             initNoHttpData();
         }
+        isPrepared = true;
     }
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -78,8 +79,8 @@ public class FragmentVocabulary extends LazyFragment implements VocabularyAdapte
         View view = inflater.inflate(R.layout.fragment_main_vocabulary, container, false);
         initView(view);
 
-        isPrepared = true;
-        lazyLoad();
+//         isPrepared = true;
+//         lazyLoad();
         return view;
     }
 
